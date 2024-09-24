@@ -1,3 +1,4 @@
+// 产品类别 列，如：Fruits
 function ProductCategoryRow({ category }) {
   return (
     <tr>
@@ -8,6 +9,7 @@ function ProductCategoryRow({ category }) {
   );
 }
 
+// 产品 列，如：Apple
 function ProductRow({ product }) {
   const name = product.stocked ? product.name :
     <span style={{ color: 'red' }}>
@@ -22,6 +24,7 @@ function ProductRow({ product }) {
   );
 }
 
+// 产品表，包含：产品类别 + 产品
 function ProductTable({ products }) {
   const rows = [];
   let lastCategory = null;
@@ -55,6 +58,7 @@ function ProductTable({ products }) {
   );
 }
 
+// 查询按钮
 function SearchBar() {
   return (
     <form>
@@ -68,6 +72,7 @@ function SearchBar() {
   );
 }
 
+// 过滤产品表
 function FilterableProductTable({ products }) {
   return (
     <div>
